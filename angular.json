@@ -21,7 +21,7 @@
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
-              "zone.js"
+              "src/polyfills.ts"
             ],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
@@ -30,7 +30,10 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              
+              "src/styles.scss",
+              "node_modules/primeng/resources/primeng.min.css",
+              "node_modules/primeng/resources/themes/lara-light-blue/theme.css"
             ],
             "scripts": []
           },
@@ -51,12 +54,13 @@
               "outputHashing": "all"
             },
             "development": {
-              "buildOptimizer": false,
-              "optimization": false,
-              "vendorChunk": true,
-              "extractLicenses": false,
-              "sourceMap": true,
-              "namedChunks": true
+              "buildOptimizer": true,
+              "optimization": true,
+              "vendorChunk": false,
+              "extractLicenses": true,
+              "sourceMap": false,
+              "namedChunks": false,
+              "aot": true
             }
           },
           "defaultConfiguration": "production"
@@ -83,8 +87,7 @@
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
             "polyfills": [
-              "zone.js",
-              "zone.js/testing"
+              "src/polyfills.ts"
             ],
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
@@ -97,8 +100,18 @@
             ],
             "scripts": []
           }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["src/tsconfig.app.json", "src/tsconfig.spec.json"],
+            "exclude": ["**/node_modules/**"]
+          }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "399ab1fd-65f3-456d-b44e-797b67bed0f5"
   }
 }

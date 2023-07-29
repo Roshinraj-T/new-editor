@@ -1,0 +1,21 @@
+.editor{
+    margin-left: 32px;
+    padding-top: 32px;
+display: flex;
+flex-direction: column;
+align-items: center;    
+}
+.editorSection{
+    width: 100%;
+}
+.image{
+    width: 500px;
+}
+.p-speeddial-button.p-button.p-button-icon-only{
+    width: 2rem;
+    height: 2rem;
+}
+.p-speeddial-action{
+    width: 2rem;
+    height: 2rem;
+}

@@ -1,0 +1,55 @@
+<div #container>
+    <!-- Your initial div that you want to duplicate -->
+    <div class="duplicate-me">
+      This is a duplicated div!
+      <input type="text" (keyup.enter)="duplicateDiv()" value="">
+    </div>
+  </div>
+
+<!-- hiding div -->
+<h1>hiding div</h1>
+  <div #container [hidden]="false">
+    <!-- Your initial div that you want to duplicate -->
+    <div class="duplicate-me">
+      This is a duplicated div!
+      <input type="text" (keyup.enter)="show()" value="hide1">
+    </div>
+  </div>
+  <div #container [hidden]="showDiv">
+    <!-- Your initial div that you want to duplicate -->
+    <div class="duplicate-me">
+      This is a duplicated div!
+      <input type="text" (keyup.enter)="show()" value="hide2">
+    </div>
+  </div>
+  <div #container [hidden]="showDiv">
+    <!-- Your initial div that you want to duplicate -->
+    <div class="duplicate-me">
+      This is a duplicated div!
+      <input type="text" (keyup.enter)="show()" value="hide3">
+    </div>
+  </div>
+  <div #container [hidden]="showDiv">
+    <!-- Your initial div that you want to duplicate -->
+    <div class="duplicate-me">
+      This is a duplicated div!
+      <input type="text" (keyup.enter)="show()" value="hide4">
+    </div>
+  </div>
+  <div #container [hidden]="showDiv">
+    <!-- Your initial div that you want to duplicate -->
+    <div class="duplicate-me">
+      This is a duplicated div!
+      <input type="text" (keyup.enter)="show()" value="hide5">
+    </div>
+  </div>
+  <div #container [hidden]="showDiv">
+    <!-- Your initial div that you want to duplicate -->
+    <div class="duplicate-me">
+      This is a duplicated div!
+      <input type="text" (keyup.enter)="show()" value="hide6">
+    </div>
+  </div>
+  
+  <!-- Button to trigger duplication -->
+  <!-- <button (click)="duplicateDiv()">Enter</button>   -->

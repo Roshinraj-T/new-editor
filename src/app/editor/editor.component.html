@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="content">
+  <p-speedDial [model]="speedDial"  [direction]="'right'">
+    <ng-template pTemplate="items">
+    </ng-template>
+  </p-speedDial>
+        <div class="editor">
+         <div class="image">
+          <img src="{{imageUrl}}" style="width: 100%;" alt="">
+         </div>
+          <div class="editorSection">
+            <!-- <ngx-editor  outputFormat="html"   [editor]="editor" (keydown.enter)="emitdata()" #ngxEditor  [formControl]="formcontrolname">
+            </ngx-editor > -->
+            <ngx-editor  outputFormat="html" [editor]="editor" (keydown.enter)="emitdata($event)" #ngxEditor  [(ngModel)]="editorValue">
+            </ngx-editor >
+            <input type="link" [hidden]="!visibleLink"  (keydown.enter)="emitdata($event)" >
+            <p *ngIf="threeDots" style="text-align: center; font-size: larger;">{{threeDots}}</p>
+          </div>
+        </div>
+    </div>    
+<input type="file" #fileInputForimage style="display: none" (change)="onFileSelected($event)" accept="image/*">
+
+

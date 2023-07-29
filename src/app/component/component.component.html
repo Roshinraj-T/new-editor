@@ -1,0 +1,5 @@
+<!-- Display a button or link to trigger the file upload -->
+<button (click)="openFileUpload()">Open File Upload</button>
+
+<!-- Hidden input element for file upload -->
+<input type="file" #fileInput style="display: none" (change)="onFileSelected($event)">
